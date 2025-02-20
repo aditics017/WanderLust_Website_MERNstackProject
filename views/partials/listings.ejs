@@ -1,0 +1,18 @@
+<% for(let listing of listings) { %>  
+    <div class="col mb-4 listing-card" data-category="<%= listing.category %>">
+      <a href="/listings/<%= listing._id %>" class="card-link" style="text-decoration: none; color: inherit;">
+        <div class="card" style="width: 18rem;">
+          <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 15rem; object-fit: cover;" />
+          <div class="card-img-overlay"></div>
+          <div class="card-body">
+            <p class="card-text">
+              <b><%= listing.title || "No description available." %></b> <br /> &#8377;
+              <%= listing.price.toLocaleString("en-IN") || "Price yet to display." %> /night
+              <i class="icon-tax"> &nbsp; &nbsp; +18% GST</i>
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  <% } %>
+  

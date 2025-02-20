@@ -1,0 +1,125 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <h3 style="font-weight: 700;">Edit your Listing</h3>
+      <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title:</label>
+          <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required />
+          <div class="valid-feedback">Title looks good!</div>
+          <div class="invalid-feedback">Please enter a valid Title</div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="description" class="form-label">Description:</label>
+          <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+          <div class="invalid-feedback">Please enter a valid Description</div>
+        </div>
+
+        <div class="mb-3"> 
+          Original Listing Image <br /> 
+          <img src="<%= updatedImageUrl %>" alt="Original Listing Image" />
+        </div>
+        
+        <div class="mb-3">
+          <label for="image" class="form-label">Image:</label>
+          <input name="listing[image]" type="file" class="form-control" />
+          <div class="invalid-feedback">Upload new Image</div>
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price:</label>
+            <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control" required />
+            <div class="invalid-feedback">Please enter a valid Price</div>
+          </div>
+          
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country:</label>
+            <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control" required />
+            <div class="invalid-feedback">Please enter a valid Country</div>
+          </div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="location" class="form-label">Location:</label>
+          <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control" required />
+          <div class="invalid-feedback">Please enter a valid Location</div>
+        </div>
+
+
+        <div class="mb-3">
+          <label class="form-label">Current Category:</label>
+          <div class="card shadow-sm border-primary" style="border-radius: 8px; background-color: #f8f9fa;">
+            <div class="card-body">
+              <% if (listing.category && listing.category.length > 0) { %>
+                <ul class="list-group">
+                  <% listing.category.forEach(function(cat) { %>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #e9ecef; border-radius: 5px; margin-bottom: 5px;">
+                      <span><%= cat %></span>
+                      <span class="badge bg-danger rounded-pill">Category</span>
+                    </li>
+                  <% }); %>
+                </ul>
+              <% } else { %>
+                <p class="text-muted">No categories selected</p>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Category Selection (Checkboxes for Update) -->
+        <div class="mb-3">
+          <label class="form-label">Edit/Update Category Listing:</label>
+          <div class="d-flex flex-wrap gap-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="listing[category][]" value="Beachfront" id="beachfront" 
+                <% if (listing.category && listing.category.includes("Beachfront")) { %> checked <% } %> />
+              <label class="form-check-label" for="beachfront">Beachfront</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="listing[category][]" value="Trending" id="trending" 
+                <% if (listing.category && listing.category.includes("Trending")) { %> checked <% } %> />
+              <label class="form-check-label" for="trending">Trending</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="listing[category][]" value="Mountain City" id="mountain" 
+                <% if (listing.category && listing.category.includes("Mountain City")) { %> checked <% } %> />
+              <label class="form-check-label" for="mountain">Mountain City</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="listing[category][]" value="Arctic Stays" id="arctic" 
+                <% if (listing.category && listing.category.includes("Arctic Stays")) { %> checked <% } %> />
+              <label class="form-check-label" for="arctic">Arctic Stays</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="listing[category][]" value="City Apartments" id="city" 
+                <% if (listing.category && listing.category.includes("City Apartments")) { %> checked <% } %> />
+              <label class="form-check-label" for="city">City Apartments</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="listing[category][]" value="Rooms" id="rooms" 
+                <% if (listing.category && listing.category.includes("Rooms")) { %> checked <% } %> />
+              <label class="form-check-label" for="rooms">Rooms</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="listing[category][]" value="Camping" id="camping" 
+                <% if (listing.category && listing.category.includes("Camping")) { %> checked <% } %> />
+              <label class="form-check-label" for="camping">Camping</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="listing[category][]" value="Luxury" id="luxury" 
+                <% if (listing.category && listing.category.includes("Luxury")) { %> checked <% } %> />
+              <label class="form-check-label" for="luxury">Luxury</label>
+            </div>
+          </div>
+        </div>
+        
+
+        
+        <button class="btn btn-dark mt-3 mb-3" style="background-color: #fe424d !important ;">Edit</button>
+      </form>
+    </div>
+  </div>
+</body>
