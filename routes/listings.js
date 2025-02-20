@@ -24,7 +24,7 @@ router
 
 
 // New Route (Form to create a listing)
-router.get("/new", isLoggedIn, validateCategory, wrapAsync(listingController.renderNewForm));
+router.get("/new", isLoggedIn, wrapAsync(listingController.renderNewForm));
 
 // Show, Update, and Delete Routes (Details, Update, and Delete a listing)
 router.route("/:id")
