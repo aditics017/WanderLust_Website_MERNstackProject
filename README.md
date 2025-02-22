@@ -1,5 +1,7 @@
 # 🌍 Wanderlust - Property Rental Platform
 
+![Wanderlust Preview](https://res.cloudinary.com/dx7ylrage/image/upload/v1740252484/wandelust_nz0wwd.png)
+
 Wanderlust is a **Node.js-powered property rental platform** where users can explore, list, and manage rental properties. The platform enables **CRUD operations**, **search functionality**, and **geolocation integration** using **Mapbox**.
 
 🌐 **Live Demo**: [Wanderlust Website](https://wanderlust-website-mernstackproject.onrender.com/listings) *(Currently optimized for desktop screens only)*
@@ -35,8 +37,9 @@ Wanderlust is a **Node.js-powered property rental platform** where users can exp
 
 ## ⚡ Installation & Setup
 
-1. **Clone the repository**: clone first
+1. **Clone the repository**:
    ```sh
+   git clone <repository-url>
    cd wanderlust
    ```
 
@@ -61,16 +64,16 @@ Wanderlust is a **Node.js-powered property rental platform** where users can exp
    ```
 
 5. **Open in browser**: `http://localhost:3000`
+
 ---
 
-## 📜 Future Enhancements
+## 📝 Future Enhancements
 - ✅ **Mobile Responsiveness** (Upcoming)
 - ✅ **Advanced Search Filters**
 - ✅ **Admin Dashboard for Listings Management**
 
 ---
 
----
+## 💏 Contact
+📞 **LinkedIn**: [Aditi Kulkarni](https://www.linkedin.com/in/aditi-kulkarni-45a9381b7/)
 
-## 📧 Contact
-🔗 **LinkedIn**: [Aditi Kulkarni](https://www.linkedin.com/in/aditi-kulkarni-45a9381b7/)
