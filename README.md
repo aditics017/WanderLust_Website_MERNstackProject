@@ -35,9 +35,8 @@ Wanderlust is a **Node.js-powered property rental platform** where users can exp
 
 ## ⚡ Installation & Setup
 
-1. **Clone the repository**:
+1. **Clone the repository**: clone first
    ```sh
-   git clone https://github.com/your-username/wanderlust.git
    cd wanderlust
    ```
 
