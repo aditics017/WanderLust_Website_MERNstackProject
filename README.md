@@ -71,9 +71,6 @@ Wanderlust is a **Node.js-powered property rental platform** where users can exp
 
 ---
 
-## 🤝 Contributing
-Feel free to submit issues or pull requests to enhance the project! 🚀
-
 ---
 
 ## 📧 Contact
