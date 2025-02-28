@@ -74,6 +74,6 @@ Wanderlust is a **Node.js-powered property rental platform** where users can exp
 
 ---
 
-## 💏 Contact
-📞 **LinkedIn**: [Aditi Kulkarni](https://www.linkedin.com/in/aditi-kulkarni-45a9381b7/)
+## 📞 Contact
+ **LinkedIn**: [Aditi Kulkarni](https://www.linkedin.com/in/aditi-kulkarni-45a9381b7/)
 
